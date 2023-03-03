@@ -1,4 +1,4 @@
-# This script is to first install Ansible on the Ansible Master VM.
+# This script is to first install Ansible and Terraform on the Ansible Master VM.
 
 sudo apt update
 sudo apt upgrade
