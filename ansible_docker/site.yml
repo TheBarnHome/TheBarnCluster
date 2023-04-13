@@ -1,1 +1,16 @@
 ---
+
+# Installation de Docker
+
+- hosts: localhost
+  become: true
+
+  roles:
+    - install_docker
+
+# Installation de Code Server
+- hosts: localhost
+  become: true
+
+  roles:
+    - code_server
