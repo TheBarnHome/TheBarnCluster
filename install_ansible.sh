@@ -19,6 +19,7 @@ sudo apt install -y ansible
 
 # Install Docker and Code-Server
 
+ansible-galaxy collection install community.docker
 ansible-playbook ansible_docker/site.yml
 
 # End
