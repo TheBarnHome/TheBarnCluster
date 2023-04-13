@@ -29,3 +29,5 @@
           ports:
             - 8443:8443
           restart: unless-stopped
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
