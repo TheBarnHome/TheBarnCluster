@@ -1,0 +1,3 @@
+---
+gitlab_domain: gitlab.the-barn
+gitlab_external_url: "https://{{ gitlab_domain }}/"
