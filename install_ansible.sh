@@ -11,7 +11,7 @@ sudo apt-add-repository ppa:ansible/ansible
 sudo apt install -y ansible
 
 ansible-galaxy role install geerlingguy.pip,3.0.0
-ansible-galaxy role install geerlingguy.docker,master
+ansible-galaxy role install geerlingguy.docker
 
 # Install Docker and Code-Server
 
