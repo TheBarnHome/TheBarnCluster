@@ -1,14 +1,7 @@
 ---
 
-# Installation de Docker
-
 - hosts: localhost
   roles:
+    - geerlingguy.pip
     - geerlingguy.docker
-
-# Installation de Code Server
-- hosts: localhost
-  become: true
-
-  roles:
     - code_server
