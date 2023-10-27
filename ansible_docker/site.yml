@@ -2,13 +2,13 @@
 
 - hosts: localhost
 
-    vars:
-      pip_install_packages:
-        - name: docker
-        
-    roles:
-      - name: geerlingguy.pip
-        src: https://github.com/geerlingguy/ansible-role-pip.git
-        version: 3.0.0
-      - geerlingguy.docker
-      - code_server
+  vars:
+    pip_install_packages:
+      - name: docker
+    
+  roles:
+    - name: geerlingguy.pip
+      src: https://github.com/geerlingguy/ansible-role-pip.git
+      version: 3.0.0
+    - geerlingguy.docker
+    - code_server
