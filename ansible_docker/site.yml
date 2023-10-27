@@ -3,10 +3,8 @@
 # Installation de Docker
 
 - hosts: localhost
-  become: true
-
   roles:
-    - install_docker
+    - geerlingguy.docker
 
 # Installation de Code Server
 - hosts: localhost
