@@ -29,13 +29,10 @@
 
     - name: Update apt and install docker-ce
       apt:
-        name: docker-ce
+        name: "{{ item }}"
         state: latest
         update_cache: true
-
-    - name: Install Docker Module for Python
-      pip:
-        name: "{{ item }}"
       with_items:
-        - docker
-        - docker-compose
+        - docker-ce
+        - python3-docker
+        - python3-docker-compose
