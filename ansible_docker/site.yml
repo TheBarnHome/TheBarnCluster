@@ -2,10 +2,12 @@
 
 - hosts: localhost
 
-  vars:
-    pip_install_packages:
-      - name: docker
-  roles:
-    - geerlingguy.pip
-    - geerlingguy.docker
-    - code_server
+  - block:
+      vars:
+      pip_install_packages:
+        - name: docker
+      roles:
+      - geerlingguy.pip
+      - geerlingguy.docker
+      - code_server
+    become: yes
