@@ -1,0 +1,20 @@
+---
+- name: "Create the {{ vm_name }} VM with ID {{ vm_id }} from template { template_id }}"
+  proxmox_kvm:
+    api_user: {{ proxmox_api_user }}
+    api_password: {{ proxmox_api_password }}
+    api_host: {{ proxmox_host }}
+    clone: {{ vm_name }}
+    vmid: {{ template_id }}
+    newid: {{ vm_id }}
+    full: yes
+    name: {{ vm_name }}
+    node: {{ proxmox_nade }}
+
+- name: "Start the new VM"
+  proxmox_kvm:
+    api_user: {{ proxmox_api_user }}
+    api_password: {{ proxmox_api_password }}
+    api_host: {{ proxmox_host }}
+    vmid: {{ vm_id }}
+    state: started
